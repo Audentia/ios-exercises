@@ -11,18 +11,35 @@
 @implementation SimpleCalculator
 
 - (NSInteger) increaseNumberBy1:(NSInteger) number {
+    
     /* WORK HERE */
+    number++;
+    
     return number;
 }
 
 - (NSInteger) addNumber:(NSInteger) number1 toNumber:(NSInteger) number2 {
+    
     /* WORK HERE */
+    number1 = number1 + number2;
+    
     return number1;
 }
 
 - (NSInteger) remainderOfNumber:(NSInteger) dividend dividedByNumber:(NSInteger) divisor {
+    
     /* WORK HERE */
-    return 0;
+    NSInteger remain;
+    remain = dividend % divisor;
+    
+    /* or i could have just done:
+     
+    dividend = dividend % divisor;
+    return dividend;
+     
+    does it matter if you return a parameter or create your own new variable? When someone inputs a parameter next time will it overwrite whatever is stored in that parameter variable anyway? */
+    
+    return remain;
 }
 
 @end
