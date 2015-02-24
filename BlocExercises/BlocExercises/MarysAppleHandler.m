@@ -14,7 +14,17 @@
     NSString *itemToReturn;
 
     /* WORK HERE */
-    
+    if (dollars < 5) {
+        itemToReturn = @"get out of my store";
+    } if (dollars == 5) {
+        itemToReturn = @"have some gum";
+    } if (dollars >= 6) {
+        itemToReturn = @"have an apple";
+    } if (dollars >= 1000) {
+        itemToReturn = @"have an Apple computer";
+    } if (dollars >= 1000000000) {
+        itemToReturn = @"have The Big Apple";
+    }
     NSLog(@"For $%ld, Mary can: %@", (long)dollars, itemToReturn);
     return itemToReturn;
 }
@@ -23,10 +33,10 @@
     /* WORK HERE */
 
     NSUInteger cost = 24;
-    
-    if (self.getsDiscount) {
+    cost = (self.getsDiscount) ? cost *= .75: cost;
+    /*if (self.getsDiscount) {
         cost *= .75;
-    }
+    }*/
     
     return cost;
 }
