@@ -12,17 +12,20 @@
 
 - (BOOL) string:(NSString *)string1 isTheSameAsString:(NSString *)string2 {
     /* WORK HERE */
-    return (string1 == string2);
+    BOOL equalCheck = [string1 isEqualToString:string2];
+    return equalCheck;
 }
 
 - (BOOL) number:(NSNumber *)number1 isTheSameAsNumber:(NSNumber *)number2 {
     /* WORK HERE */
-    return (number1 == number2);
+    BOOL equalCheck = [number1 isEqualToNumber:number2];
+    return equalCheck;
 }
 
 - (BOOL) integer:(NSInteger)integer1 isGreaterThan:(NSInteger)integer2 {
     /* WORK HERE */
-    return NO;
+    BOOL greaterCheck = integer1 > integer2;
+    return greaterCheck;
 }
 
 @end
