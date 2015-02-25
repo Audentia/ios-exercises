@@ -20,8 +20,8 @@
             number++;
         }
     } else {
-        for (NSString *smallNumber = [NSString stringWithFormat:@"%ld", (long)otherNumber]; otherNumber <= number; otherNumber++) {
-            smallNumber = [NSString stringWithFormat:@"%ld", (long)otherNumber];
+        for (NSInteger i = otherNumber; i <= number; i++) {
+            NSString *smallNumber = [NSString stringWithFormat:@"%ld", (long)i];
             [output appendString:smallNumber];
         }
     }
