@@ -54,9 +54,8 @@
     NSMutableArray *findWorf = [@[characterArray] mutableCopy];
 
     for (NSString *characters in findWorf) { //my fast enum
-        NSString *currentChar = [findWorf[characters] componentsJoinedByString:@""]; //trying to take one element of the array and turn it into string, but not the entire array
      
-        NSRange worfRange = [currentChar rangeOfString:@"worf" options:NSCaseInsensitiveSearch];
+        NSRange worfRange = NSMakeRange(characters, [findWorf count]);
      if (wheresWorf.location == NSNotFound) {
         return NO;
      } else {

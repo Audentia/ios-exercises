@@ -14,18 +14,23 @@
     /* WORK HERE */
     NSMutableString *output = [NSMutableString stringWithString:@""];
     if (number < otherNumber) {
-        while (number <= otherNumber) {
-            NSString *smallNumber = [NSString stringWithFormat:@"%ld", (long)number];
+        NSInteger low = number;
+        NSInteger high = otherNumber;
+        while (low <= high) {
+            NSString *smallNumber = [NSString stringWithFormat:@"%ld", (long)low];
             [output appendString:smallNumber];
-            number++;
+            low++;
         }
+        
     } else {
-        for (NSInteger i = otherNumber; i <= number; i++) {
-            NSString *smallNumber = [NSString stringWithFormat:@"%ld", (long)i];
+        NSInteger low = otherNumber;
+        NSInteger high = number;
+        while (low <= high) {
+            NSString *smallNumber = [NSString stringWithFormat:@"%ld", (long)low];
             [output appendString:smallNumber];
+            low++;
         }
     }
-  
     
     return output;
 }
