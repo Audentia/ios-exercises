@@ -17,19 +17,18 @@
 
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
     /* WORK HERE */
-    //go over every dictionary in the array, grab favorite drink for each one, return it as an array
-    //for loop goes over everything
-    //method of array get certain object and return to another array
-    //valueForKey: Returns an array containing the results of invoking valueForKey: using key on each of the array's objects.
+    NSArray *favDrinks = [charactersArray valueForKey:@"favorite drink"];
     
-    return @[];
+    return favDrinks;
 }
 
 - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     /* WORK HERE */
-    //put a quote into the dictionary, convert it do mutable, then return it
-    //any quote will do
-    return @{};
+    NSMutableDictionary *characterWithQuote = [characterDictionary mutableCopy];
+    [characterWithQuote setObject:@"never give up! never surrender!" forKey:@"quote"];
+
+    return characterWithQuote;
+    
 }
 
 @end
